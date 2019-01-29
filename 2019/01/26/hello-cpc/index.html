@@ -83,7 +83,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="hello,cpc">
 <meta property="og:url" content="http://yoursite.com/2019/01/26/hello-cpc/index.html">
-<meta property="og:site_name" content="ChaoxCpc">
+<meta property="og:site_name" content="Cpc">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2019-01-26T12:13:52.285Z">
 <meta name="twitter:card" content="summary">
@@ -123,7 +123,7 @@
 
 
 
-  <title>hello,cpc | ChaoxCpc</title>
+  <title>hello,cpc | Cpc</title>
   
 
 
@@ -153,7 +153,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">ChaoxCpc</span>
+        <span class="site-title">Cpc</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -273,13 +273,13 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/26/hello-cpc/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ChaoxCpc">
+      <meta itemprop="name" content="Cpc">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ChaoxCpc">
+      <meta itemprop="name" content="Cpc">
     </span>
 
     
@@ -312,6 +312,16 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/26/hello-cpc/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/01/26/hello-cpc/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
@@ -405,6 +415,14 @@
           
 
   
+    <div class="comments" id="comments">
+      
+        <div onclick="showGitment()" id="gitment-display-button">Show comments from Gitment</div>
+        <div id="gitment-container" style="display:none"></div>
+      
+    </div>
+
+  
 
 
 
@@ -432,7 +450,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">ChaoxCpc</p>
+              <p class="site-author-name" itemprop="name">Cpc</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -506,7 +524,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">ChaoxCpc</span>
+  <span class="author" itemprop="copyrightHolder">Cpc</span>
 
   
 <!--  <div class="powered-by">
@@ -662,6 +680,47 @@
 
 
 
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'githubcpc',
+            repo: 'https://githubcpc.github.io',
+            
+            lang: "zh-Hans" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: 'cf900d544012de03de38ebb4bb40e27ea03952ae',
+            
+                client_id: 'b692b8a3c2f10547925f'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      function showGitment(){
+        document.getElementById("gitment-display-button").style.display = "none";
+        document.getElementById("gitment-container").style.display = "block";
+        renderGitment();
+      }
+      
+      </script>
+    
 
 
 

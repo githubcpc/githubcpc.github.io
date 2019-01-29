@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="hyperledger fabric部署搭建服务器准备：CentOS7.3以上">
+<meta name="description" content="hyperledger fabric部署搭建服务器准备 CentOS7.3以上  环境准备 安装git&amp;amp;wget&amp;amp;vim  yum install -y git wget vim  安装docker   docker版本需要17.06.2-ce以上 yum install -y docker 启动docker service docker start  安装docker-compo">
 <meta name="keywords" content="hyperledger,fabric">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hyperledger fabric 1.4">
 <meta property="og:url" content="http://yoursite.com/2019/01/26/hyperledger fabric1.4/index.html">
-<meta property="og:site_name" content="ChaoxCpc">
-<meta property="og:description" content="hyperledger fabric部署搭建服务器准备：CentOS7.3以上">
+<meta property="og:site_name" content="Cpc">
+<meta property="og:description" content="hyperledger fabric部署搭建服务器准备 CentOS7.3以上  环境准备 安装git&amp;amp;wget&amp;amp;vim  yum install -y git wget vim  安装docker   docker版本需要17.06.2-ce以上 yum install -y docker 启动docker service docker start  安装docker-compo">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-26T13:17:57.042Z">
+<meta property="og:updated_time" content="2019-01-29T13:04:06.292Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hyperledger fabric 1.4">
-<meta name="twitter:description" content="hyperledger fabric部署搭建服务器准备：CentOS7.3以上">
+<meta name="twitter:description" content="hyperledger fabric部署搭建服务器准备 CentOS7.3以上  环境准备 安装git&amp;amp;wget&amp;amp;vim  yum install -y git wget vim  安装docker   docker版本需要17.06.2-ce以上 yum install -y docker 启动docker service docker start  安装docker-compo">
 
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <title>hyperledger fabric 1.4 | ChaoxCpc</title>
+  <title>hyperledger fabric 1.4 | Cpc</title>
   
 
 
@@ -156,7 +156,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">ChaoxCpc</span>
+        <span class="site-title">Cpc</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -276,13 +276,13 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/26/hyperledger fabric1.4/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ChaoxCpc">
+      <meta itemprop="name" content="Cpc">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ChaoxCpc">
+      <meta itemprop="name" content="Cpc">
     </span>
 
     
@@ -316,6 +316,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/26/hyperledger fabric1.4/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/01/26/hyperledger fabric1.4/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -340,7 +350,51 @@
       
 
       
-        <h1 id="hyperledger-fabric部署搭建"><a href="#hyperledger-fabric部署搭建" class="headerlink" title="hyperledger fabric部署搭建"></a>hyperledger fabric部署搭建</h1><p>服务器准备：CentOS7.3以上</p>
+        <h1 id="hyperledger-fabric部署搭建"><a href="#hyperledger-fabric部署搭建" class="headerlink" title="hyperledger fabric部署搭建"></a>hyperledger fabric部署搭建</h1><h2 id="服务器准备"><a href="#服务器准备" class="headerlink" title="服务器准备"></a>服务器准备</h2><ul>
+<li>CentOS7.3以上</li>
+</ul>
+<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><ol>
+<li>安装git&amp;wget&amp;vim</li>
+</ol>
+<p><code>yum install -y git wget vim</code></p>
+<ol start="2">
+<li>安装docker </li>
+</ol>
+<p>docker版本需要17.06.2-ce以上</p>
+<p><code>yum install -y docker</code></p>
+<p>启动docker</p>
+<p><code>service docker start</code></p>
+<ol start="3">
+<li>安装docker-compose</li>
+</ol>
+<p>docker-compose版本需要1.14以上</p>
+<p><code>sudo curl -L &quot;https://github.com/docker/compose/releases/download/1.23.0/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose</code></p>
+<p><code>sudo chmod +x /usr/local/bin/docker-compose</code></p>
+<p><code>sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose</code></p>
+<ol start="4">
+<li>安装go</li>
+</ol>
+<p>go版本需要1.10以上</p>
+<p><code>wget https://dl.google.com/go/go1.11.5.linux-amd64.tar.gz</code></p>
+<p><code>tar zxvf go1.11.5.linux-amd64.tar.gz -C /usr/local</code></p>
+<p><code>vim /etc/profile</code></p>
+<p>末尾加入如下环境<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export PATH=$PATH:/usr/local/go/bin</span><br><span class="line">export GOROOT=/usr/local/go	</span><br><span class="line">export GOPATH=/root/go</span><br><span class="line">export PATH=$PATH:$GOROOT/bin</span><br></pre></td></tr></table></figure></p>
+<p><code>source /etc/profile</code></p>
+<ol start="5">
+<li><p>检查环境</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git version 1.8.3.1  </span><br><span class="line">Docker version 1.13.1, build 07f3374/1.13.1  </span><br><span class="line">docker-compose version 1.23.0, build c8524dc1  </span><br><span class="line">go version go1.11.5 linux/amd64</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置docker代理</p>
+</li>
+</ol>
+<p><a href="https://cr.console.aliyun.com/cn-hangzhou/mirrors" target="_blank" rel="noopener">阿里云代理地址</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir -p /etc/docker</span><br><span class="line">sudo tee /etc/docker/daemon.json &lt;&lt;-&apos;EOF&apos;</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  &quot;registry-mirrors&quot;: [&quot;你的阿里云代理地址&quot;]</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></table></figure></p>
+<h2 id="下载源码"><a href="#下载源码" class="headerlink" title="下载源码"></a>下载源码</h2><p><strong>创建文件夹目录</strong>:</p>
+<p><code>mkdir go/src/github.com/hyperledger -p</code></p>
+<p><code>cd go/src/github.com/hyperledger</code></p>
+<p><strong>下载源码</strong>:</p>
+<p><code>git clone -b release-1.4 https://github.com/hyperledger/fabric.git</code></p>
+<p><code>git clone -b release-1.4 https://github.com/hyperledger/fabric-samples.git</code></p>
+<p>如果bootstrap脚本执行不了，或者报错可以直接进入 <a href="https://nexus.hyperledger.org/content/repositories/releases/org/hyperledger/fabric/hyperledger-fabric/linux-amd64-1.4.0/hyperledger-fabric-linux-amd64-1.4.0.tar.gz" target="_blank" rel="noopener">下载链接</a> 下载后导入到相应的位置。</p>
 
       
     </div>
@@ -411,6 +465,14 @@
           
 
   
+    <div class="comments" id="comments">
+      
+        <div onclick="showGitment()" id="gitment-display-button">Show comments from Gitment</div>
+        <div id="gitment-container" style="display:none"></div>
+      
+    </div>
+
+  
 
 
 
@@ -447,7 +509,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">ChaoxCpc</p>
+              <p class="site-author-name" itemprop="name">Cpc</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -504,7 +566,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hyperledger-fabric部署搭建"><span class="nav-number">1.</span> <span class="nav-text">hyperledger fabric部署搭建</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hyperledger-fabric部署搭建"><span class="nav-number">1.</span> <span class="nav-text">hyperledger fabric部署搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#服务器准备"><span class="nav-number">1.1.</span> <span class="nav-text">服务器准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境准备"><span class="nav-number">1.2.</span> <span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载源码"><span class="nav-number">1.3.</span> <span class="nav-text">下载源码</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -537,7 +599,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">ChaoxCpc</span>
+  <span class="author" itemprop="copyrightHolder">Cpc</span>
 
   
 <!--  <div class="powered-by">
@@ -693,6 +755,47 @@
 
 
 
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'githubcpc',
+            repo: 'https://githubcpc.github.io',
+            
+            lang: "zh-Hans" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: 'cf900d544012de03de38ebb4bb40e27ea03952ae',
+            
+                client_id: 'b692b8a3c2f10547925f'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      function showGitment(){
+        document.getElementById("gitment-display-button").style.display = "none";
+        document.getElementById("gitment-container").style.display = "block";
+        renderGitment();
+      }
+      
+      </script>
+    
 
 
 
