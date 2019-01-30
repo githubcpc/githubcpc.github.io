@@ -341,53 +341,26 @@
       
         
           
-            <h1 id="hyperledger-fabric部署搭建"><a href="#hyperledger-fabric部署搭建" class="headerlink" title="hyperledger fabric部署搭建"></a>hyperledger fabric部署搭建</h1><h2 id="服务器准备"><a href="#服务器准备" class="headerlink" title="服务器准备"></a>服务器准备</h2><ul>
-<li>CentOS7.3以上</li>
-</ul>
-<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><ol>
-<li>安装git&amp;wget&amp;vim</li>
-</ol>
-<p><code>yum install -y git wget vim</code></p>
-<ol start="2">
-<li>安装docker </li>
-</ol>
-<p>docker版本需要17.06.2-ce以上</p>
-<p><code>yum install -y docker</code></p>
-<p>启动docker</p>
-<p><code>service docker start</code></p>
-<ol start="3">
-<li>安装docker-compose</li>
-</ol>
-<p>docker-compose版本需要1.14以上</p>
-<p><code>sudo curl -L &quot;https://github.com/docker/compose/releases/download/1.23.0/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose</code></p>
-<p><code>sudo chmod +x /usr/local/bin/docker-compose</code></p>
-<p><code>sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose</code></p>
-<ol start="4">
-<li>安装go</li>
-</ol>
-<p>go版本需要1.10以上</p>
-<p><code>wget https://dl.google.com/go/go1.11.5.linux-amd64.tar.gz</code></p>
-<p><code>tar zxvf go1.11.5.linux-amd64.tar.gz -C /usr/local</code></p>
-<p><code>vim /etc/profile</code></p>
-<p>末尾加入如下环境<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export PATH=$PATH:/usr/local/go/bin</span><br><span class="line">export GOROOT=/usr/local/go	</span><br><span class="line">export GOPATH=/root/go</span><br><span class="line">export PATH=$PATH:$GOROOT/bin</span><br></pre></td></tr></table></figure></p>
-<p><code>source /etc/profile</code></p>
-<ol start="5">
-<li><p>检查环境</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git version 1.8.3.1  </span><br><span class="line">Docker version 1.13.1, build 07f3374/1.13.1  </span><br><span class="line">docker-compose version 1.23.0, build c8524dc1  </span><br><span class="line">go version go1.11.5 linux/amd64</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置docker代理</p>
-</li>
-</ol>
-<p><a href="https://cr.console.aliyun.com/cn-hangzhou/mirrors" target="_blank" rel="noopener">阿里云代理地址</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir -p /etc/docker</span><br><span class="line">sudo tee /etc/docker/daemon.json &lt;&lt;-&apos;EOF&apos;</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  &quot;registry-mirrors&quot;: [&quot;你的阿里云代理地址&quot;]</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></table></figure></p>
-<h2 id="下载源码"><a href="#下载源码" class="headerlink" title="下载源码"></a>下载源码</h2><p><strong>创建文件夹目录</strong>:</p>
-<p><code>mkdir go/src/github.com/hyperledger -p</code></p>
-<p><code>cd go/src/github.com/hyperledger</code></p>
-<p><strong>下载源码</strong>:</p>
-<p><code>git clone -b release-1.4 https://github.com/hyperledger/fabric.git</code></p>
-<p><code>git clone -b release-1.4 https://github.com/hyperledger/fabric-samples.git</code></p>
-<p>如果bootstrap脚本执行不了，或者报错可以直接进入 <a href="https://nexus.hyperledger.org/content/repositories/releases/org/hyperledger/fabric/hyperledger-fabric/linux-amd64-1.4.0/hyperledger-fabric-linux-amd64-1.4.0.tar.gz" target="_blank" rel="noopener">下载链接</a> 下载后导入到相应的位置。</p>
+          hyperledger fabric部署搭建服务器准备
+CentOS7.3以上
 
-          
+环境准备
+安装git&amp;wget&amp;vim
+
+yum install -y git wget vim
+
+安装docker 
+
+docker版本需要17.06.2-ce以上
+yum install -y do
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/01/26/hyperledger fabric1.4/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -526,8 +499,15 @@
       
         
           
-            
           
+          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/01/26/hello-cpc/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -696,7 +676,7 @@
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="#">ChaoxCpc</a> 强力驱动</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="#">ChaoxCpc</a> 提供</div>
 
 
 
