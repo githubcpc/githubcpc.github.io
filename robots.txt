@@ -8,7 +8,6 @@ Disallow: /js/
 Disallow: /css/
 Disallow: /fonts/
 Disallow: /vendors/
-Disallow: /fancybox/
 
 Sitemap: https://githubcpc.github.io/sitemap.xml
 Sitemap: https://githubcpc.github.io/baidusitemap.xml
